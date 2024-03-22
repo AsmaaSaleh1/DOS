@@ -1,0 +1,15 @@
+body{
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+}
+
+/*.card{*/
+/*    width: 20rem;*/
+/*}*/
+
+.card:hover{
+    box-shadow:0 10px 12px 0 rgba(0,0,0,0.2),0 6px 16px 0 rgba(0,0,0,0.19) !important;
+}
+
+.infobtn{
+    margin-left: 10px !important;
+}

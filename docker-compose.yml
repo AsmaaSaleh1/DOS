@@ -1,0 +1,28 @@
+services:
+  catalog:
+    image: bazar.com/catalog:latest
+    build:
+      context: ./DosProject
+    command: ['node', './bin/www']
+    ports:
+      - 8081:3000
+    expose:
+      - 3000
+  orders:
+    image: bazar.com/orders:latest
+    build:
+      context: ./DosProjectOrder
+    command: ['node', './bin/www']
+    ports:
+      - 8082:3000
+    expose:
+      - 3000
+  frontend:
+    image: bazar.com/frontend:latest
+    build:
+      context: ./DosProjectFrontend
+    command: [ 'react-scripts', 'start' ]
+    ports:
+      - 8080:3000
+    expose:
+      - 3000
